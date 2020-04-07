@@ -5,7 +5,19 @@ const router = express.Router();
 const cMovie = require('../models/cMovie');
 
 router.get('/', (req, res) => {
-  const promise = cMovie.find({ });
+  const promise = cMovie.aggregate([
+    {
+      $lookup: {
+        from: 'directors',
+        localField: 'director_id',
+        foreignField: '_id',
+        as: 'director'
+      }
+    },
+    {
+      $unwind: '$director'
+    }
+  ]);
 
   promise.then((data) => {
      res.json(data);
