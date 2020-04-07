@@ -102,4 +102,26 @@ router.post('/', (req, res) => {
 
 });
 
+router.put('/:director_id', (req, res, next) => {
+
+    const promise = cDirector.findByIdAndUpdate(
+        req.params.director_id,
+        req.body,
+        {
+            new: true
+        }
+    );
+
+    promise.then((director) => {
+        if(!director){
+            next({ message: 'The director was not found!', code: 99 })
+        } else{
+            res.json(director)
+        }
+    }).catch((err) => {
+        res.json(err);
+    });
+
+});
+
 module.exports = router;
