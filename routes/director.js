@@ -124,4 +124,16 @@ router.put('/:director_id', (req, res, next) => {
 
 });
 
+router.delete('/:director_id', (req, res, next) => {
+
+    const promise = cDirector.findByIdAndRemove(req.params.director_id);
+
+    promise.then((data) => {
+        res.json(data);
+    }).catch((err) => {
+        res.json(err);
+    });
+
+});
+
 module.exports = router;
