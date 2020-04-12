@@ -1,4 +1,4 @@
-const server = require('../app');
+const server = require('../../app');
 const chaiHttp = require('chai-http');
 const chai = require('chai');
 
@@ -13,7 +13,7 @@ describe('Node Server', () => {
             .get('/')
             .end((err, res) => {
                 res.should.have.status(200);
-                done();
+                done(); 
             })
     });
     
