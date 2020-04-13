@@ -1,4 +1,5 @@
 const server = require('../../app');
+
 const chaiHttp = require('chai-http');
 const chai = require('chai');
 
@@ -8,7 +9,7 @@ chai.use(chaiHttp);
 
 describe('Node Server', () => {
     
-    it('(GET /) Anasayfayı döndürür', (done) => {
+    it('(GET /) returns the home page', (done) => {
         chai.request(server)
             .get('/')
             .end((err, res) => {
