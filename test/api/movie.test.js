@@ -126,7 +126,7 @@ describe('/api/movies test', () => {
         it('it should DELETE a movie given by id', () => {
             chai.request(server)
                 .delete(`/api/movies/${movieId}`)
-                .set('x-access-token', 'sadassda')
+                .set('x-access-token', token)
                 .end((err, res) => {
                     res.should.have.status(200);
                     res.body.should.be.a('object');
