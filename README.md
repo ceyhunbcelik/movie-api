@@ -1,4 +1,4 @@
-[![Build status]][(https://api.travis-ci.com/ceyhunbcelik/movie-api.svg)](https://travis-ci.com/github/ceyhunbcelik/movie-api )
+[![Build status][(https://api.travis-ci.com/ceyhunbcelik/movie-api.svg)](https://travis-ci.com/github/ceyhunbcelik/movie-api )
 
 # movie-api
 
