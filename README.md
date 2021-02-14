@@ -1,6 +1,6 @@
 [![Build status](https://api.travis-ci.com/ceyhunbcelik/movie-api.svg)](https://travis-ci.com/github/ceyhunbcelik/movie-api )
 
-# movie-api
+# Movie API
 
 [![nodejs dersleri](https://mehmetseven.net/content/images/2017/12/nodejs-mehmet-seven.jpg)](http://bit.ly/ndjsm)
 
